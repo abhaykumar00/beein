@@ -22,7 +22,7 @@ const fetchData = async (id) => {
   };
   try {
     const response = await axios.post(url, requestBody, { headers });
-    console.log("this is data ", response.data);
+    
     let existingData = [];
     try {
       const data = await fs.readFile(`11.json`, "utf-8");
@@ -85,4 +85,4 @@ const starting = async () => {
   const values = JSON.parse(await fs.readFile(`a.json`, "utf-8"));
   console.log(values.length);
 };
-starting();
+start();
